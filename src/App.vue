@@ -1,5 +1,5 @@
 <template>
-  <Product :name="product" />
+  <Product :price="1500" :name="product" />
 </template>
 
 <script setup lang="ts">
