@@ -1,9 +1,16 @@
 <template>
-  <h3>{{ name }}</h3>
+  <h3>{{ title }}</h3>
 </template>
 
 <script setup lang="ts">
-defineProps(['name']);
+import { computed } from 'vue';
+const props = defineProps({
+  name: {
+    type: String,
+    required: true,
+  },
+});
+const title = computed(() => props.name.toUpperCase());
 </script>
 
 <style scoped lang="scss"></style>
